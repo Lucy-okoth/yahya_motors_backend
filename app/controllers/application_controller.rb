@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
       name:params[:buyer_name],
       email: params[:buyer_email]
     )
-    car = Car.filter(model: params[:model])
+    car = Car.find_by(model: params[:model])
 
     car_quantity = car.quantity -= 1
 
