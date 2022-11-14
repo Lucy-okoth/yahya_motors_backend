@@ -7,7 +7,7 @@
 This project was contributed by : 
 1. <a href=https://github.com/nicco99> Nicholas Njeru </a>
 2. <a href=https://github.com/Lucy-okoth>Lucy Okoth</a>
-3. <a href=https://github.com/esipil> Timothy Lenku/a>
+3. <a href=https://github.com/esipil> Timothy Lenku</a>
 4. <a href=https://github.com/Jidraf>Jidraph Ng'ang'a</a>
 5. <a href=https://github.com/muthwi1234>Peter Kilungya</a>
 
