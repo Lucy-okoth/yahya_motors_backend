@@ -10,6 +10,7 @@ class ApplicationController < Sinatra::Base
     car = Car.find(params[:id])
     car.to_json(include: :reviews)
   end
+  
   post '/add_car' do 
     car = Car.create(
       category: params[:category],
@@ -50,7 +51,6 @@ class ApplicationController < Sinatra::Base
       fuel_type: params[:fuel_type],
       year: params[:year],
       model: params[:model],
-      price: params[:price],
       seats: params[:seats]
     )
     car.to_json
@@ -59,10 +59,6 @@ class ApplicationController < Sinatra::Base
 get '/admin' do
   admin = Admin.all
   admin.to_json
-end
-get "/transactions" do
-  transaction_arr =Transaction.buyer
-  transaction_arr.to_json
 end
 
 post "/reviews"   do
@@ -75,6 +71,10 @@ reviews = Review.create(
 reviews.to_json
 end
 
+get "/transactions" do
+transactions = Transaction.all.order("created_at DESC")
+transactions.to_json(include: :car)
+end
 
 
 end
